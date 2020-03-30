@@ -1,0 +1,15 @@
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router/index'
+import './plugins/element.js'
+import http from './http.js'
+
+Vue.config.productionTip = false
+
+Vue.prototype.$http=http    //可以在任何页面使用 this.$http来使用http
+
+
+new Vue({
+  router,
+  render: h => h(App),
+}).$mount('#app')
